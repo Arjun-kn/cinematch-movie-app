@@ -88,13 +88,14 @@ export default function App() {
         onOpenBookings={() => setShowMyBookings(true)}
       />
 
+      {/* Database Error Banner */}
       {dbError && (
         <div className="bg-indigo-950/60 border-b border-indigo-800/50 px-6 py-2.5 flex items-center justify-between gap-2 text-indigo-200 text-xs">
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0" />
-            <span>Database server is unreachable on port 5000. Please start your backend server.</span>
+            <span>Backend database API is waking up or unreachable. Please refresh after 30 seconds if using Render free tier.</span>
           </div>
-          <span className="bg-red-900/80 px-2 py-0.5 rounded text-[10px] font-mono text-red-300">Server Offline</span>
+          <span className="bg-red-900/80 px-2 py-0.5 rounded text-[10px] font-mono text-red-300">API Offline</span>
         </div>
       )}
 

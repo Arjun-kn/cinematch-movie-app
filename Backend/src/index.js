@@ -17,6 +17,11 @@ initDB();
 // API Routes
 app.use('/api', apiRoutes);
 
+// Root health check endpoint
+app.get('/', (req, res) => {
+  res.json({ message: 'CineMatch Backend API Server is Live & Running!', health: '/health', api: '/api' });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date() });

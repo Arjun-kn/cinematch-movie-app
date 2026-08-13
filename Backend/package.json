@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is cinematic mathcing app backend",
+  "main": "index.js",
+  "scripts": {
+   "start": "node src/index.js",
+  "dev": "nodemon src/index.js",
+  "seed": "node src/script/seed.js"
+  },
+  "author": "Arjun Chauhan",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "neo4j-driver": "^6.2.0",
+    "nodemon": "^3.1.14"
+  }
+}
